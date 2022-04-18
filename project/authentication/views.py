@@ -6,7 +6,8 @@ from .models import Profile
 
 
 
+
 def index(request):
-    profile = Profile.objects.filter(user=request.user)
+    profile = Profile.objects.get(user=request.user)
     context = {'profile':profile}
     return render(request, 'index.html', context)

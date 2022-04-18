@@ -7,7 +7,9 @@
   <body>
 
 
-    {{ profile }}
+    <h1> {{ request.user }} </h1>
+    <h1> {{ profile.phone }} </h1>
+    <img src="{{ profile.photo.url }}">
 
   </body>
 </html>
